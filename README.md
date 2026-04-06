@@ -3,7 +3,7 @@
 
 ## Team Members
 - Richard Leomo - rleomo@stevens.edu - TBD
-- Vincent Estridge - vestridg@stevens.edu - TBD
+- Vincent Estridge - vestridg@stevens.edu - 20045305
 
 ## Project Overview
 This project builds a rule-based Email Spam Detection and Risk Analysis System in Python. The program reads a dataset of email messages, processes the text, computes a weighted risk score, and classifies each message as Not Spam, Suspicious, or Spam.
