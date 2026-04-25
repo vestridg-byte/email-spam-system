@@ -5,7 +5,7 @@ class EmailMessage:
     """Represents a single email message and its processed content."""
 
     def __init__(self, sender, subject, body, label="unknown"):
-        """Initialize an EmailMessage object."""
+        """Initialize an EmailMessage object with basic email fields."""
         self.sender = sender
         self.subject = subject
         self.body = body
@@ -14,9 +14,9 @@ class EmailMessage:
         self.tokens = []
 
     def preprocess(self):
-        """Clean and tokenize the combined subject and body."""
-        combined = f"{self.subject} {self.body}"
-        self.cleaned_text = clean_text(combined)
+        """Clean and tokenize the combined subject and body text."""
+        combined_text = f"{self.subject} {self.body}"
+        self.cleaned_text = clean_text(combined_text)
         self.tokens = self.cleaned_text.split()
 
     def __str__(self):
@@ -24,5 +24,5 @@ class EmailMessage:
         return f"Email from {self.sender} | Subject: {self.subject} | Label: {self.label}"
 
     def __len__(self):
-        """Return the number of processed tokens."""
+        """Return the number of processed tokens in the email."""
         return len(self.tokens)
