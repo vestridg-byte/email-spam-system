@@ -40,7 +40,7 @@ Thresholds:
 - `src/email_message.py`: EmailMessage class
 - `src/spam_filter.py`: SpamFilter class
 - `src/utils.py`: helper functions
-- `src/custom_exceptions.py`: tests for custom exceptions
+- `src/custom_exceptions.py`: tests for custom exceptions classes
 - `tests/test_utils.py`: tests for utility functions
 - `tests/test_spam_filter.py`: tests for spam scoring logic
 - `data/emails.csv`: dataset file
