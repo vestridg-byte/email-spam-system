@@ -38,11 +38,12 @@ Thresholds:
 ## File Structure
 - `main_notebook.ipynb`: main program notebook
 - `src/email_message.py`: EmailMessage class
-- `src/spam_filter.py`: EmailMessage class
+- `src/spam_filter.py`: SpamFilter class
 - `src/utils.py`: helper functions
-- `src/custom_exceptions.py`: tests for utility functions
+- `src/custom_exceptions.py`: tests for custom exceptions
+- `tests/test_utils.py`: tests for utility functions
 - `tests/test_spam_filter.py`: tests for spam scoring logic
-- 'data/emails.csv`: dataset file
+- `data/emails.csv`: dataset file
 
 ## How to Run
 1. Install dependencies:
