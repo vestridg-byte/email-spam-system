@@ -2,7 +2,7 @@
 # Email Spam Detection and Risk Analysis System
 
 ## Team Members
-- Richard Leomo - rleomo@stevens.edu - TBD
+- Richard Leomo - rleomo@stevens.edu - 20044588
 - Vincent Estridge - vestridg@stevens.edu - 20045305
 
 ## Project Overview
