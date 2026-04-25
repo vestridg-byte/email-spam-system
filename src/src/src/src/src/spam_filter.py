@@ -17,14 +17,14 @@ class SpamFilter:
     REQUIRED_COLUMNS = {"sender", "subject", "body", "label"}
 
     def __init__(self, threshold_spam=10, threshold_suspicious=5):
-        """Initialize thresholds and storage."""
+        """Initialize thresholds and storage for the spam filter."""
         self.threshold_spam = threshold_spam
         self.threshold_suspicious = threshold_suspicious
         self.dataset = None
         self.messages = []
 
     def load_data(self, filepath):
-        """Load email dataset and validate columns."""
+        """Load the email dataset from a CSV file and validate columns."""
         try:
             df = pd.read_csv(filepath)
         except FileNotFoundError as exc:
@@ -52,7 +52,7 @@ class SpamFilter:
             self.messages.append(message)
 
     def calculate_risk_score(self, message):
-        """Calculate weighted risk score for an email."""
+        """Calculate a weighted risk score for an email message."""
         keyword_count = min(count_spam_keywords(message.tokens), 5)
         url_count = min(count_urls(message.cleaned_text), 3)
         exclamation_count = min(count_exclamations(message.body), 5)
@@ -69,7 +69,7 @@ class SpamFilter:
         return score
 
     def classify_score(self, score):
-        """Classify score as not spam, suspicious, or spam."""
+        """Classify a score as not spam, suspicious, or spam."""
         if score >= self.threshold_spam:
             return "spam"
         if score >= self.threshold_suspicious:
@@ -77,7 +77,7 @@ class SpamFilter:
         return "not spam"
 
     def predict_all(self):
-        """Predict all emails in the dataset."""
+        """Predict classes and scores for all messages in the dataset."""
         results = []
 
         for message in self.messages:
