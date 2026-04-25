@@ -25,4 +25,4 @@ class EmailMessage:
 
     def __len__(self):
         """Return the number of processed tokens in the email."""
-        return len(self.tokens)
+        return len(self.tokens) 
