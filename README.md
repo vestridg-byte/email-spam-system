@@ -56,4 +56,4 @@ Thresholds:
 
 ## Main Contributions of Each Team Member
 - Richard Leomo: proposal, README, folder structure, EmailMessage class, notebook workflow, integration
-- Vincent Estridge: SpamFilter support, testing, charts, dataset review
+- Vincent Estridge: repository participation, project review, pending implementation support
