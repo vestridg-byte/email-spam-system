@@ -55,5 +55,5 @@ Thresholds:
 3. Open `main_notebook.ipynb` and run all cells in order.
 
 ## Main Contributions of Each Team Member
-- Richard Leomo: proposal, README, folder structure, EmailMessage class, notebook workflow, integration
-- Vincent Estridge: repository participation, project review, pending implementation support
+- Richard Leomo: Richard Leomo: proposal writing, README, folder structure, EmailMessage class, notebook workflow, and project integration
+- Vincent Estridge: repository access established; implementation contributions pending
