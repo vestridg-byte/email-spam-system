@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "741d482c-f1f4-434f-8729-2bf4e56e6f6f",
+      "cell_type": "code",
+      "source": "import pandas as pd\nimport matplotlib.pyplot as plt\n\nfrom src.spam_filter import SpamFilter",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "10cdf556-c731-4f72-b9fa-c7165691f48c",
+      "cell_type": "code",
+      "source": "spam_filter = SpamFilter()\ndf = spam_filter.load_data(\"data/emails.csv\")\ndf.head()",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "b4290073-2cf7-4e6c-af0f-d400240fd10f",
+      "cell_type": "code",
+      "source": "spam_filter.build_messages()\nlen(spam_filter.messages), spam_filter.messages[0]",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "bb0b24ac-0d13-4eb5-8b83-357f3e50ddde",
+      "cell_type": "code",
+      "source": "results = spam_filter.predict_all()\nresults",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "b61a6819-c2f3-4e7f-bbd9-fb35eadc1dbc",
+      "cell_type": "code",
+      "source": "results.to_csv(\"data/predictions.csv\", index=False)\nresults",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "13a25101-c0a7-4cbf-bdf5-06bdbfa3805d",
+      "cell_type": "code",
+      "source": "results[\"actual_binary\"] = results[\"actual_label\"].apply(\n    lambda x: \"spam\" if x == \"spam\" else \"not spam\"\n)\nresults[\"pred_binary\"] = results[\"prediction\"].apply(\n    lambda x: \"spam\" if x == \"spam\" else \"not spam\"\n)\n\naccuracy = (results[\"actual_binary\"] == results[\"pred_binary\"]).mean()\naccuracy",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "c9a8beef-e85f-4c9e-9e99-f72ef60ad0c0",
+      "cell_type": "code",
+      "source": "results[\"prediction\"].value_counts().plot(kind=\"bar\")\nplt.title(\"Predicted Email Classes\")\nplt.xlabel(\"Class\")\nplt.ylabel(\"Count\")\nplt.show()",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
