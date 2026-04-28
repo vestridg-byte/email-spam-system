@@ -55,5 +55,46 @@ Thresholds:
 3. Open `main_notebook.ipynb` and run all cells in order.
 
 ## Main Contributions of Each Team Member
-- Richard Leomo: Richard Leomo: proposal writing, README, folder structure, EmailMessage class, notebook workflow, and project integration
-- Vincent Estridge: repository participation and pending implementation contributions
+- Richard Leomo:
+  - Proposal writing
+  - README structure
+  - Folder architecture
+  - EmailMessage class
+  - Notebook workflow integration
+
+- Vincent Estridge:
+  - SpamFilter implementation
+  - Risk scoring logic
+  - Exception handling
+  - Unit testing with pytest
+  - Visualization and evaluation metrics
+
+## Model Evaluation
+
+We compute overall classification accuracy by comparing predicted labels to actual labels.
+
+## Exception Handling
+
+This project includes multiple meaningful exception handling scenarios:
+
+1. File Loading Errors  
+   - Raises `FileNotFoundError` if the dataset file does not exist.
+   - Raises `ValueError` if required dataset columns are missing.
+
+2. Email Validation  
+   - Raises `ValueError` if an email message is missing sender, subject, or body content.
+
+These safeguards ensure data integrity and program stability.
+
+## Advanced Python Features Used
+
+The project intentionally incorporates several advanced Python features:
+
+- Generator expressions (used in scoring logic)
+- Lambda functions (used in notebook label transformation)
+- enumerate() (used during batch prediction)
+- Set operations (used for optimized keyword matching)
+- Operator overloading (`__len__`, `__eq__`)
+- __name__ execution guard
+
+These features demonstrate intermediate-to-advanced Python proficiency.

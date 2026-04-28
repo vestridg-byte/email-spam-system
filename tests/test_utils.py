@@ -6,6 +6,6 @@ def test_clean_text():
     assert "free" in cleaned
     assert "click" in cleaned
 
-def test count_urls():
+def test_count_urls():
     text = "Visit http://test.com and www.site.com"
     assert count_urls(text) == 2
