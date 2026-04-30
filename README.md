@@ -59,7 +59,7 @@ Thresholds:
   - Proposal writing
   - README structure and updates
   - Folder architecture
-  - src/__Int__.py
+  - src/__int__.py
   - src/custom_exceptions.py
   - src/utils.py
   - Dataset setup and notebook execution
