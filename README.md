@@ -59,13 +59,17 @@ Thresholds:
   - Proposal writing
   - README structure and updates
   - Folder architecture
-  - EmailMessage class
-  - Main notebook workflow integration
+  - src/__Int__.py
+  - src/custom_exceptions.py
+  - src/utils.py
   - Dataset setup and notebook execution
 
 - Vincent Estridge:
   - Initial repository setup 
   - Project folder creation
+  - Main notebook workflow integration
+  - src/email_message.py
+  - src/spam_filter.py 
   - Development log and repository maintenance
   - Test file support, repository setup, and and later refactoring contributions
 
