@@ -57,17 +57,19 @@ Thresholds:
 ## Main Contributions of Each Team Member
 - Richard Leomo:
   - Proposal writing
-  - README structure
+  - README structure and updates
   - Folder architecture
   - EmailMessage class
-  - Notebook workflow integration
+  - Main notebook workflow integration
+  - Dataset setup and notebook execution
 
 - Vincent Estridge:
-  - SpamFilter implementation
-  - Risk scoring logic
-  - Exception handling
-  - Unit testing with pytest
+  - Initial repository setup 
+  - Project folder creation
+  - Development log and repository maintenance
+  - Test file support and later refactoring contributions
   - Visualization and evaluation metrics
+
 
 ## Model Evaluation
 
