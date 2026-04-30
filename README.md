@@ -67,8 +67,7 @@ Thresholds:
   - Initial repository setup 
   - Project folder creation
   - Development log and repository maintenance
-  - Test file support and later refactoring contributions
-  - Visualization and evaluation metrics
+  - Test file support, repository setup, and and later refactoring contributions
 
 
 ## Model Evaluation
